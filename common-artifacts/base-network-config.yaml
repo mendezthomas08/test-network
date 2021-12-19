@@ -1,0 +1,98 @@
+---
+#
+name: "balance-transfer"
+x-type: "hlfv1"
+description: "Balance Transfer Network"
+version: "1.0"
+channels:
+  CHANNEL_NAME:
+    orderers:
+      - orderer0.DOMAIN_NAME.com
+      - orderer1.DOMAIN_NAME.com
+      - orderer2.DOMAIN_NAME.com
+    peers:
+      peer0.ORG_NAME.DOMAIN_NAME.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+
+      peer1.ORG_NAME.DOMAIN_NAME.com:
+        endorsingPeer: false
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: false
+    
+    chaincodes:
+      - repocc:v0
+organizations:
+  ORG_NAME:
+    mspid: ORG_NAMEMSP
+
+    peers:
+      - peer0.ORG_NAME.DOMAIN_NAME.com
+      - peer1.ORG_NAME.DOMAIN_NAME.com
+    certificateAuthorities:
+      - ca-ORG_NAME
+    adminPrivateKey:
+      path: ORG_NAME-config/crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/users/Admin@ORG_NAME.DOMAIN_NAME.com/msp/keystore/PRIVATE_KEY
+    signedCert:
+      path: ORG_NAME-config/crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/users/Admin@ORG_NAME.DOMAIN_NAME.com/msp/signcerts/Admin@ORG_NAME.DOMAIN_NAME.com-cert.pem
+
+orderers:
+  orderer0.DOMAIN_NAME.com:
+    url: grpcs://localhost:7050
+    grpcOptions:
+      ssl-target-name-override: orderer0.DOMAIN_NAME.com
+      grpc-max-send-message-length: 15
+
+    tlsCACerts:
+      path: ORG_NAME-config/crypto-config/ordererOrganizations/DOMAIN_NAME.com/orderers/orderer0.DOMAIN_NAME.com/tls/ca.crt
+
+  orderer1.DOMAIN_NAME.com:
+    url: grpcs://localhost:8050
+
+    grpcOptions:
+      ssl-target-name-override: orderer1.DOMAIN_NAME.com
+      grpc-max-send-message-length: 15
+
+    tlsCACerts:
+      path: ORG_NAME-config/crypto-config/ordererOrganizations/DOMAIN_NAME.com/orderers/orderer1.DOMAIN_NAME.com/tls/ca.crt
+
+  orderer2.DOMAIN_NAME.com:
+    url: grpcs://localhost:9050
+    grpcOptions:
+      ssl-target-name-override: orderer2.DOMAIN_NAME.com
+      grpc-max-send-message-length: 15
+
+    tlsCACerts:
+      path: ORG_NAME-config/crypto-config/ordererOrganizations/DOMAIN_NAME.com/orderers/orderer2.DOMAIN_NAME.com/tls/ca.crt
+peers:
+  peer0.ORG_NAME.DOMAIN_NAME.com:
+    url: grpcs://localhost:7051
+    eventUrl: grpcs://localhost:7053
+
+    grpcOptions:
+      ssl-target-name-override: peer0.ORG_NAME.DOMAIN_NAME.com
+    tlsCACerts:
+      path: ORG_NAME-config/crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/peers/peer0.ORG_NAME.DOMAIN_NAME.com/tls/ca.crt
+
+  peer1.ORG_NAME.DOMAIN_NAME.com:
+    url: grpcs://localhost:8051
+    eventUrl: grpcs://localhost:8053
+    grpcOptions:
+      ssl-target-name-override: peer1.ORG_NAME.DOMAIN_NAME.com
+    tlsCACerts:
+      path: ORG_NAME-config/crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/peers/peer1.ORG_NAME.DOMAIN_NAME.com/tls/ca.crt
+#
+certificateAuthorities:
+  ca-ORG_NAME:
+    url: https://localhost:7054
+    httpOptions:
+      verify: false
+    tlsCACerts:
+      path: ORG_NAME-config/crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/ca/ca.ORG_NAME.DOMAIN_NAME.com-cert.pem
+      - enrollId: admin
+        enrollSecret: adminpw
+    caName: ca-ORG_NAME
+

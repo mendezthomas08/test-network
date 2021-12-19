@@ -1,0 +1,101 @@
+
+version: '2'
+
+networks:
+   default:
+      external:
+          name: NETWORK_NAME
+
+services:
+    couchdb01ORG_NAME:
+        extends:
+            file: docker-compose-base.yaml
+            service: couchdb
+        container_name: couchdb01ORG_NAME
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+           - "COUCHDB_PEER0_PORT:5984"
+
+    peer0.ORG_NAME.DOMAIN_NAME.com:
+        extends:
+            file: docker-compose-base.yaml
+            service: peer
+        container_name: peer0.ORG_NAME.DOMAIN_NAME.com
+        environment:
+#            - CORE_PEER_CHAINCODELISTENADDRESS=peer0.ORG_NAME.DOMAIN_NAME.com:7051
+            - CORE_PEER_NETWORKID=peer0.ORG_NAME.DOMAIN_NAME.com
+            - CORE_PEER_ID=peer0.ORG_NAME.DOMAIN_NAME.com
+            - CORE_PEER_ADDRESS=peer0.ORG_NAME.DOMAIN_NAME.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.ORG_NAME.DOMAIN_NAME.com:7051
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.ORG_NAME.DOMAIN_NAME.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER0_ORG1}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER0_ORG1}
+            - CORE_PEER_LOCALMSPID=ORG_NAMEMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@ORG_NAME.DOMAIN_NAME.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@ORG_NAME.DOMAIN_NAME.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@ORG_NAME.DOMAIN_NAME.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb01ORG_NAME:5984
+        volumes:
+            - ../crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/peers/peer0.ORG_NAME.DOMAIN_NAME.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/peers/peer0.ORG_NAME.DOMAIN_NAME.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/users:/var/hyperledger/users
+            - ../channels/:/var/hyperledger/channels
+            - /var/hyperledger/peer0.ORG_NAME:/var/hyperledger/production
+
+        depends_on:
+#            - orderer0.DOMAIN_NAME.com
+#            - orderer1.DOMAIN_NAME.com
+#            - orderer2.DOMAIN_NAME.com
+            - couchdb01ORG_NAME
+        ports:
+          - P0_PORT0:7051
+          - P0_PORT1:7053
+
+    couchdb02ORG_NAME:
+        extends:
+            file: docker-compose-base.yaml
+            service: couchdb
+        container_name: couchdb02ORG_NAME
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "COUCHDB_PEER1_PORT:5984"
+
+    peer1.ORG_NAME.DOMAIN_NAME.com:
+        extends:
+            file: docker-compose-base.yaml
+            service: peer
+        container_name: peer1.ORG_NAME.DOMAIN_NAME.com
+        environment:
+ #           - CORE_PEER_CHAINCODELISTENADDRESS=peer1.ORG_NAME.DOMAIN_NAME.com:7051
+            - CORE_PEER_ID=peer1.ORG_NAME.DOMAIN_NAME.com
+            - CORE_PEER_ADDRESS=peer1.ORG_NAME.DOMAIN_NAME.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.ORG_NAME.DOMAIN_NAME.com:7051
+            - CORE_PEER_NETWORKID=peer1.ORG_NAME.DOMAIN_NAME.com
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.ORG_NAME.DOMAIN_NAME.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER1_ORG1}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER1_ORG1}
+            - CORE_PEER_LOCALMSPID=ORG_NAMEMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@ORG_NAME.DOMAIN_NAME.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@ORG_NAME.DOMAIN_NAME.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@ORG_NAME.DOMAIN_NAME.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb02ORG_NAME:5984
+        volumes:
+            - ../crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/peers/peer1.ORG_NAME.DOMAIN_NAME.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/peers/peer1.ORG_NAME.DOMAIN_NAME.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/users:/var/hyperledger/users
+            - ../channels/:/var/hyperledger/channels
+            - /var/hyperledger/peer1.ORG_NAME:/var/hyperledger/production
+        depends_on:
+ #           - orderer0.DOMAIN_NAME.com
+ #           - orderer1.DOMAIN_NAME.com
+ #           - orderer2.DOMAIN_NAME.com
+            - couchdb02ORG_NAME
+            - peer0.ORG_NAME.DOMAIN_NAME.com
+        ports:
+          - P1_PORT0:7051
+          - P1_PORT1:7053
+        #

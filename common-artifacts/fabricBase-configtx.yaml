@@ -1,0 +1,55 @@
+---
+Organizations:
+
+    - &ordererorg
+        Name: ordererorg
+        ID: ordererMSP
+        MSPDir: ../../crypto-config/ordererOrganizations/DOMAIN_NAME.com/msp
+
+    - &ORG_NAME
+        Name: ORG_NAMEMSP
+        ID: ORG_NAMEMSP
+        MSPDir: ../../crypto-config/peerOrganizations/ORG_NAME.DOMAIN_NAME.com/msp
+        AnchorPeers:
+            - Host: peer0.ORG_NAME.DOMAIN_NAME.com
+              Port: 7051
+
+Orderer: &OrdererDefaults
+
+    OrdererType: kafka
+    Addresses:
+        - orderer0.ORG_NAME.DOMAIN_NAME.com:7050
+        - orderer1.ORG_NAME.DOMAIN_NAME.com:7050
+        - orderer2.ORG_NAME.DOMAIN_NAME.com:7050
+    BatchTimeout: 2s
+    BatchSize:
+        MaxMessageCount: 10
+        AbsoluteMaxBytes: 99 MB
+        PreferredMaxBytes: 512 KB
+    Kafka:
+        Brokers:
+            - kafka0.ORG_NAME.DOMAIN_NAME.com:9092
+            - kafka1.ORG_NAME.DOMAIN_NAME.com:9092
+            - kafka2.ORG_NAME.DOMAIN_NAME.com:9092
+            - kafka3.ORG_NAME.DOMAIN_NAME.com:9092
+    Organizations:
+Application: &ApplicationDefaults
+    Organizations:
+
+Profiles:
+
+    TwoOrgsOrdererGenesis:
+        Orderer:
+            <<: *OrdererDefaults
+            Organizations:
+                - *ordererorg
+        Consortiums:
+            SampleConsortium:
+                Organizations:
+                    - *ORG_NAME
+    TwoOrgsChannel:
+        Consortium: SampleConsortium
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *ORG_NAME

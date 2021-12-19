@@ -1,0 +1,17 @@
+
+OrdererOrgs:
+  - Name: orderer
+    Domain: DOMAIN_NAME.com
+    #Template:
+    #  Count: 3
+    Specs:
+      - Hostname: orderer0.ORG_NAME
+      - Hostname: orderer1.ORG_NAME
+      - Hostname: orderer2.ORG_NAME
+PeerOrgs:
+  - Name: ORG_NAME
+    Domain: ORG_NAME.DOMAIN_NAME.com
+    Template:
+      Count: 2
+    Users:
+      Count: 1

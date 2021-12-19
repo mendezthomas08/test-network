@@ -1,0 +1,1392 @@
+2021-12-17 05:50:53 [[34mdebug[39m]: 	 ------>>>>>> new request for /users/register 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	User name : dltledgers.system@anz.com 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	Org name  : dltorg 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	Role  : client 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	Attrs  :  
+2021-12-17 05:50:53 [[34mdebug[39m]: 	Secret  : 1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg undefined 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg undefined 
+
+ 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	Successfully initialized the credential stores 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 05:50:53 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	 ------>>>>>> new request for /channels/dltchannel/chaincodes/testcc 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	==================== INVOKE ON CHAINCODE ================== 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	channelName  : dltchannel 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	chaincodeName : testcc 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	fcn  : invokeAnotherChaincode 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	args  : testcc,dltchannel,{"fcn": "createBP","params": ["bp01","bpName","bpDescription"]} 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	
+============ invoke transaction on channel dltchannel ============
+ 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getChannel - name dltchannel 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer0.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer1.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer2.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 05:51:19 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "2993d69ce1e9538c8d38d4e1a279f97d36b161bea645b2e3ec1301a96fa24f76",
+  "s": "928babea1e760d0a04ba61ac6ed069e3bb61c5394c06fe1bf492b068dc3be4b",
+  "recoveryParam": 1
+}
+2021-12-17 05:51:19 [[31merror[39m]: 	invoke chaincode proposal failed for an unknown reason {"version":0,"timestamp":null,"response":{"status":500,"message":"transaction returned with failure: Error: INVOKE_CHAINCODE failed: transaction ID: 87dee56ee74f07f6a63bc0563eb2a52ee46e52e2a89b92339faf123cb2359797: execute failed: error sending: txid: 87dee56ee74f07f6a63bc0563eb2a52ee46e52e2a89b92339faf123cb2359797(dltchannel) exists","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null} 
+2021-12-17 05:51:19 [[31merror[39m]: 	Failed to invoke chaincode. cause:invoke chaincode proposal failed for an unknown reason {"version":0,"timestamp":null,"response":{"status":500,"message":"transaction returned with failure: Error: INVOKE_CHAINCODE failed: transaction ID: 87dee56ee74f07f6a63bc0563eb2a52ee46e52e2a89b92339faf123cb2359797: execute failed: error sending: txid: 87dee56ee74f07f6a63bc0563eb2a52ee46e52e2a89b92339faf123cb2359797(dltchannel) exists","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null} 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	 ------>>>>>> new request for /chaincodes 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	==================== INSTALL CHAINCODE ================== 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	peers : peer0.dltorg.dlt-domain.com,peer1.dltorg.dlt-domain.com 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	chaincodeName : testcc 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	chaincodePath  : ../../chaincode/testcc/node 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	chaincodeVersion  : v5 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	chaincodeType  : node 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	
+
+============ Install chaincode on organizations ============
+ 
+2021-12-17 06:51:42 [[32minfo[39m]: 	Calling peers in organization "dltorg" to join the channel 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:51:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "f95dbd2042096692cef8ca6f85d04aae590bc5786e04f044681bac3a605248e4",
+  "s": "62b030e2afb302d04227f6df5805543b636a415197ce6cd7b043f6a44edf6d21",
+  "recoveryParam": 1
+}
+2021-12-17 06:51:42 [[32minfo[39m]: 	install proposal was good 
+2021-12-17 06:51:42 [[32minfo[39m]: 	install proposal was good 
+2021-12-17 06:51:42 [[32minfo[39m]: 	Successfully installed chaincode 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	 ------>>>>>> new request for /channels/dltchannel/upgradechaincodes 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	==================== UPGRADE CHAINCODE ================== 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	peers  : peer0.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	channelName  : dltchannel 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	chaincodeName : testcc 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	chaincodeVersion  : v5 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	chaincodeType  : node 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	fcn  : upgradechaincodes 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	args  :  
+2021-12-17 06:51:49 [[34mdebug[39m]: 	
+
+============ Upgrade chaincode on channel dltchannel ============
+ 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getChannel - name dltchannel 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer0.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer1.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer2.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:51:49 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "739dad7eec6b6ef576e27c206123d3e8794f64c3f91e8396d45debf4da7a27f5",
+  "s": "7c8d017b73e0d92f3aeb982a275c6254e1a1928b80022e65acad9b25a6f49607",
+  "recoveryParam": 0
+}
+2021-12-17 06:52:16 [[32minfo[39m]: 	upgrade proposal was good 
+2021-12-17 06:52:16 [[32minfo[39m]: 	Successfully sent Proposal and received ProposalResponse: Status - 200, message - "", metadata - "
+testccv5escc"vscc* 
+	dltorgMSP2D
+ In#�a��) O�VH�}���f�p~]ٰ�o>�u� c��c}�
+�Br���&>���fΖ��Uk�ϱ���: �ޝ�~6�EUTw��g��|)5m�؁�K�]m��/ZB 
+	dltorgMSP", endorsement signature: 0E! � �<Tm�{�(f��39d�&���v:k)n A����$�2�1�8{�� ɀ��BYx|�- 
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 06:52:16 [[34mdebug[39m]: 	found 1 eventhubs for this organization dltorg 
+2021-12-17 06:52:16 [[34mdebug[39m]: 	upgradeEventPromise - setting up event 
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "2c613df2056d6e9584256cc297750ef33bc43f000ee93aa3b7388b19793ed111",
+  "s": "3c0474a9b4e1b2423010d8ce6e7e447147a59eb0f46924858b567e2f962fea65",
+  "recoveryParam": 1
+}
+2021-12-17 06:52:16 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "668f0a0f2e8408a7903a82ce460fe069b0f60890959e95ed04a5870b7a2a4619",
+  "s": "5677bfc669e3f702fcfd9b3e172038dd34f1def044aefa29864e6ab98256ebe3",
+  "recoveryParam": 0
+}
+2021-12-17 06:52:18 [[32minfo[39m]: 	The chaincode upgrade transaction has been committed on peer localhost:7051 
+2021-12-17 06:52:18 [[32minfo[39m]: 	Transaction e35b220c1224580d57441fac29e4c984e727e0730772fbff3f3343e951a93230 has status of VALID in blocl 8 
+2021-12-17 06:52:18 [[32minfo[39m]: 	The chaincode upgrade transaction was valid. 
+2021-12-17 06:52:18 [[34mdebug[39m]: 	------->>> R E S P O N S E : ["The chaincode upgrade transaction was valid.",{"status":"SUCCESS","info":""}] 
+2021-12-17 06:52:18 [[32minfo[39m]: 	Successfully sent transaction to the orderer. 
+2021-12-17 06:52:18 [[34mdebug[39m]: 	Event results for event hub :localhost:7051 
+2021-12-17 06:52:18 [[34mdebug[39m]: 	The chaincode upgrade transaction was valid. 
+2021-12-17 06:52:18 [[32minfo[39m]: 	Successfully upgrade chaincode in organization dltorg to the channel 'dltchannel' 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	 ------>>>>>> new request for /channels/dltchannel/chaincodes/testcc 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	==================== INVOKE ON CHAINCODE ================== 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	channelName  : dltchannel 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	chaincodeName : testcc 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	fcn  : invokeAnotherChaincode 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	args  : testcc,dltchannel,{"fcn": "createBP","params": ["bp01","bpName","bpDescription"]} 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	
+============ invoke transaction on channel dltchannel ============
+ 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getChannel - name dltchannel 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer0.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer1.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer2.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 06:52:39 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "ba83a69a89b305520108096cdbf7c324de2efd940624d07f42928c9a659dad18",
+  "s": "5e32e50edb405d45be52953a5c2f3508aeb79a9821cc67426f6239d64a5c8039",
+  "recoveryParam": 0
+}
+2021-12-17 06:52:39 [[31merror[39m]: 	invoke chaincode proposal failed for an unknown reason {"version":0,"timestamp":null,"response":{"status":500,"message":"transaction returned with failure: TypeError: \"value\" argument must not be a number","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null} 
+2021-12-17 06:52:39 [[31merror[39m]: 	Failed to invoke chaincode. cause:invoke chaincode proposal failed for an unknown reason {"version":0,"timestamp":null,"response":{"status":500,"message":"transaction returned with failure: TypeError: \"value\" argument must not be a number","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null} 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	 ------>>>>>> new request for /chaincodes 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	==================== INSTALL CHAINCODE ================== 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	peers : peer0.dltorg.dlt-domain.com,peer1.dltorg.dlt-domain.com 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	chaincodeName : testcc 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	chaincodePath  : ../../chaincode/testcc/node 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	chaincodeVersion  : v6 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	chaincodeType  : node 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	
+
+============ Install chaincode on organizations ============
+ 
+2021-12-17 07:20:33 [[32minfo[39m]: 	Calling peers in organization "dltorg" to join the channel 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:20:33 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "16e833a8f56a0f2910ad87b6e6057e294a4a7d01c965d68d35d0bd1b881fa1f3",
+  "s": "6deba0c15ea9cedf6d202ce7954d8fd8a30010299762c9ea78f24c7c8ddca18f",
+  "recoveryParam": 1
+}
+2021-12-17 07:20:33 [[32minfo[39m]: 	install proposal was good 
+2021-12-17 07:20:33 [[32minfo[39m]: 	install proposal was good 
+2021-12-17 07:20:33 [[32minfo[39m]: 	Successfully installed chaincode 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	 ------>>>>>> new request for /channels/dltchannel/upgradechaincodes 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	==================== UPGRADE CHAINCODE ================== 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	peers  : peer0.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	channelName  : dltchannel 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	chaincodeName : testcc 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	chaincodeVersion  : v6 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	chaincodeType  : node 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	fcn  : upgradechaincodes 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	args  :  
+2021-12-17 07:20:42 [[34mdebug[39m]: 	
+
+============ Upgrade chaincode on channel dltchannel ============
+ 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getChannel - name dltchannel 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer0.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer1.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer2.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:20:42 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "7adf2dc8c88f3ccd5aabebd563ed3991fa8eb7115b367abaabfb2aab203c931",
+  "s": "4698c63bd164d96ed9c2f874db5475491c491b69f6793bcdc9e54c21ba7bb815",
+  "recoveryParam": 0
+}
+2021-12-17 07:21:07 [[32minfo[39m]: 	upgrade proposal was good 
+2021-12-17 07:21:07 [[32minfo[39m]: 	Successfully sent Proposal and received ProposalResponse: Status - 200, message - "", metadata - "
+testccv6escc"vscc* 
+	dltorgMSP2D
+ ݅B'�H&V)�(4����/����!�R��D �'$~�>���/�g'n�7Ru��/��f�=: c�Y��)���i���O�_$���?5JP�@�G�B 
+	dltorgMSP", endorsement signature: 0E! ��6竜�?��5�x����AD�+�ё�3�� �<��S͊e�� ��4�D%�O&��Z�a:� 
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 07:21:07 [[34mdebug[39m]: 	found 1 eventhubs for this organization dltorg 
+2021-12-17 07:21:07 [[34mdebug[39m]: 	upgradeEventPromise - setting up event 
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "f1ab7297c2facec1a894653681e4f3b40ea15d4b0bdcd07f2f15e76ab3d40f2e",
+  "s": "3c90a5cbd9b5c9473da974ff4f0cac2828fd1532bbe21c13e6da0c034ac7443",
+  "recoveryParam": 1
+}
+2021-12-17 07:21:07 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "738fecfdee74f2ea0673d9e09b13512b2ea3d2f438da1561e951e4c0e0fd4097",
+  "s": "6408f5d3b2044e02c67274c2ca8c5472f0ddd233f7b32664202679f8c4a455a2",
+  "recoveryParam": 0
+}
+2021-12-17 07:21:09 [[32minfo[39m]: 	The chaincode upgrade transaction has been committed on peer localhost:7051 
+2021-12-17 07:21:09 [[32minfo[39m]: 	Transaction b8e2db5f1713b4b23ba1bcef8a0801dea73c886ca2acbab6f82774adcb8f5ff3 has status of VALID in blocl 9 
+2021-12-17 07:21:09 [[32minfo[39m]: 	The chaincode upgrade transaction was valid. 
+2021-12-17 07:21:09 [[34mdebug[39m]: 	------->>> R E S P O N S E : ["The chaincode upgrade transaction was valid.",{"status":"SUCCESS","info":""}] 
+2021-12-17 07:21:09 [[32minfo[39m]: 	Successfully sent transaction to the orderer. 
+2021-12-17 07:21:09 [[34mdebug[39m]: 	Event results for event hub :localhost:7051 
+2021-12-17 07:21:09 [[34mdebug[39m]: 	The chaincode upgrade transaction was valid. 
+2021-12-17 07:21:09 [[32minfo[39m]: 	Successfully upgrade chaincode in organization dltorg to the channel 'dltchannel' 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	 ------>>>>>> new request for /channels/dltchannel/chaincodes/testcc 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	==================== INVOKE ON CHAINCODE ================== 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	channelName  : dltchannel 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	chaincodeName : testcc 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	fcn  : invokeAnotherChaincode 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	args  : dltltledgerssccc,dltchannel,{"fcn": "createBP","params": ["bp01","bpName","bpDescription"]} 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	
+============ invoke transaction on channel dltchannel ============
+ 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getChannel - name dltchannel 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer2.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:12 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "3d57f52594aa8a5e63b7599dc2ee75f22c46af02544140e4853772e764fe03ee",
+  "s": "3d4380b2a1e0c773080c1a0713e3284a49e8ac6220593b4aca069d8eeb18a4f",
+  "recoveryParam": 0
+}
+2021-12-17 07:22:12 [[31merror[39m]: 	invoke chaincode proposal failed for an unknown reason {"version":0,"timestamp":null,"response":{"status":500,"message":"transaction returned with failure: Error: INVOKE_CHAINCODE failed: transaction ID: d209ca00b815ec9ab3d70f1de9187ce8ce8afb16e1b26b4d0ff3f083920f7d3f: chaincode dltltledgerssccc not found","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null} 
+2021-12-17 07:22:12 [[31merror[39m]: 	Failed to invoke chaincode. cause:invoke chaincode proposal failed for an unknown reason {"version":0,"timestamp":null,"response":{"status":500,"message":"transaction returned with failure: Error: INVOKE_CHAINCODE failed: transaction ID: d209ca00b815ec9ab3d70f1de9187ce8ce8afb16e1b26b4d0ff3f083920f7d3f: chaincode dltltledgerssccc not found","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null} 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	 ------>>>>>> new request for /channels/dltchannel/chaincodes/testcc 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	==================== INVOKE ON CHAINCODE ================== 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	channelName  : dltchannel 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	chaincodeName : testcc 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	fcn  : invokeAnotherChaincode 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	args  : dltltledgerssccc,dltchannel,{"fcn": "createBP","params": ["bp01","bpName","bpDescription"]} 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	
+============ invoke transaction on channel dltchannel ============
+ 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getChannel - name dltchannel 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer2.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:26 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "9e1d6bf7fa0d6b55b28fe154883f155eff4c21941e33234f0a6381e8f5af9d13",
+  "s": "2873040a84c2868e9f438d85a4bad492a445e86c0d5c4c6e685daf8c156e9a3e",
+  "recoveryParam": 0
+}
+2021-12-17 07:22:26 [[31merror[39m]: 	invoke chaincode proposal failed for an unknown reason {"version":0,"timestamp":null,"response":{"status":500,"message":"transaction returned with failure: Error: INVOKE_CHAINCODE failed: transaction ID: 3c83eaf11435a12ffe3f6f333f32fc66b7a6f33e78a7d25f03a666dfdc3aa3be: chaincode dltltledgerssccc not found","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null} 
+2021-12-17 07:22:26 [[31merror[39m]: 	Failed to invoke chaincode. cause:invoke chaincode proposal failed for an unknown reason {"version":0,"timestamp":null,"response":{"status":500,"message":"transaction returned with failure: Error: INVOKE_CHAINCODE failed: transaction ID: 3c83eaf11435a12ffe3f6f333f32fc66b7a6f33e78a7d25f03a666dfdc3aa3be: chaincode dltltledgerssccc not found","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null} 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	 ------>>>>>> new request for /channels/dltchannel/chaincodes/testcc 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	==================== INVOKE ON CHAINCODE ================== 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	channelName  : dltchannel 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	chaincodeName : testcc 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	fcn  : invokeAnotherChaincode 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	args  : dltledgerssccc,dltchannel,{"fcn": "createBP","params": ["bp01","bpName","bpDescription"]} 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	
+============ invoke transaction on channel dltchannel ============
+ 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getChannel - name dltchannel 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer2.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "4a58f3c2b7019b01ed919cd5e78cc067c7e890f48a2f50abc70030bb5f110868",
+  "s": "57604dd9dbf9f3af753da4fcad53cbfd4ea4023ef3d8e6882aa20bed42bb1231",
+  "recoveryParam": 0
+}
+2021-12-17 07:22:57 [[32minfo[39m]: 	invoke chaincode proposal was good 
+2021-12-17 07:22:57 [[32minfo[39m]: 	Successfully sent Proposal and received ProposalResponse: Status - 200, message - "", metadata - "", endorsement signature: 0D -��e}w�b�mo�ER�$��n',��6�J� ���SV���H������c��ӭ&d��4] 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 07:22:57 [[34mdebug[39m]: 	invokeEventPromise - setting up event 
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "f08a26dcf662fc6b26153fb385562126a6890e41e5ec188f3c78f4540e4ffde7",
+  "s": "7d7f0f3ac3d2ece51f725c0e49339a7facdac011bb74bbbaaf6af31f106eb6ab",
+  "recoveryParam": 1
+}
+2021-12-17 07:22:57 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "a31fbc60e2222acc71bd6c46726c8259a3ad5302f3b56b00625e9730592704e5",
+  "s": "7706eb8bf8ba2b06195bd353d68a05f5611e2394839f2639c98598856857c9a5",
+  "recoveryParam": 1
+}
+2021-12-17 07:22:59 [[32minfo[39m]: 	The chaincode invoke chaincode transaction has been committed on peer localhost:7051 
+2021-12-17 07:22:59 [[32minfo[39m]: 	Transaction e23e558b2b648dd10aafa2062bf2f5e67e310776fb2a2744bb63380560448b76 has status of VALID in blocl 10 
+2021-12-17 07:22:59 [[32minfo[39m]: 	The invoke chaincode transaction was valid. 
+2021-12-17 07:22:59 [[34mdebug[39m]: 	------->>> R E S P O N S E : ["The invoke chaincode transaction was valid.",{"status":"SUCCESS","info":""}] 
+2021-12-17 07:22:59 [[32minfo[39m]: 	Successfully sent transaction to the orderer. 
+2021-12-17 07:22:59 [[34mdebug[39m]: 	Event results for event hub :localhost:7051 
+2021-12-17 07:22:59 [[34mdebug[39m]: 	The invoke chaincode transaction was valid. 
+2021-12-17 07:22:59 [[32minfo[39m]: 	Successfully invoked the chaincode dltorg to the channel 'dltchannel' for transaction ID: e23e558b2b648dd10aafa2062bf2f5e67e310776fb2a2744bb63380560448b76 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	 ------>>>>>> new request for /channels/dltchannel/chaincodes/dltledgerssccc?peer=peer0.dltorg.dlt-domain.com&fcn=queryAllBp&args=[] 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	Decoded from JWT token: username - dltledgers.system@anz.com, orgname - dltorg 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	==================== QUERY BY CHAINCODE ================== 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	channelName : dltchannel 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	chaincodeName : dltledgerssccc 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	fcn : queryAllBp 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	args : [] 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg dltledgers.system@anz.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1b809f75ab8826781b3c55630b4449882ffaeee715464d6ae359bdd0fe073a90","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/98da8023b66ac1f233025e7f1ffbbe9650e8fddb715702423e2bd9f3aa27304e_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"46297a864702a9220c15af69","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "dltledgers.system@anz.com"
+}
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-pub"
+}
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "7d6749e94a72d123293b06f5b5e7daab1759c8ba8dc5d880f9285a273d97508b-priv"
+}
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 9a4802b3af9442aeb6fdb6004db725093f21b717ce650006a7b7ad9a127f66f6 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: 44ded901caa0b2013630ee6002946467f33d2173a78c3564139ee3e158a83070 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	User dltledgers.system@anz.com was found to be registered and enrolled 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg dltledgers.system@anz.com 
+
+ 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getChannel - name dltchannel 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer0.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer1.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer2.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 07:44:55 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "8439aafac5881dfffcd5d9c4d54e115c895910c15e5340b1b0fd3fae8bbc11cf",
+  "s": "7b7af87f7587a37ee1190dab51b151e2455deaddf8adfb03b394284102852af8",
+  "recoveryParam": 0
+}
+2021-12-17 07:44:55 [[32minfo[39m]: 	[{"Key":"bp_bp01","Record":{"bpDescription":"bpDescription","bpId":"bp01","bpName":"bpName","docType":"bp"}}] 
+2021-12-17 08:14:40 [[32minfo[39m]: 	****************** SERVER STARTED ************************ 
+2021-12-17 08:14:40 [[32minfo[39m]: 	***************  http://localhost:4000  ****************** 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	 ------>>>>>> new request for /users/register 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	User name : smartflow.system@anz.com 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	Org name  : dltorg 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	Role  : client 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	Attrs  :  
+2021-12-17 08:14:44 [[34mdebug[39m]: 	Secret  : 1a6a04a15e9334d135b9dfc90bf4c27528a1dd1c4692db625ddb97fbeeb1f719 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1a6a04a15e9334d135b9dfc90bf4c27528a1dd1c4692db625ddb97fbeeb1f719","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/7eff9d1b4188dc40b7fbfaf3a7a31e2cd7ca9574dac529e2a91f56c1edeb7a76_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"d0e158ee1b259ab55a2b0348","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg undefined 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1a6a04a15e9334d135b9dfc90bf4c27528a1dd1c4692db625ddb97fbeeb1f719","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/7eff9d1b4188dc40b7fbfaf3a7a31e2cd7ca9574dac529e2a91f56c1edeb7a76_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"d0e158ee1b259ab55a2b0348","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 08:14:44 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg undefined 
+
+ 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	Successfully initialized the credential stores 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "smartflow.system@anz.com"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	User smartflow.system@anz.com was not enrolled, so we will need an admin user object to register 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "admin"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FabricCAClientImpl.js]: Successfully constructed Fabric CA client from options - {"caname":"ca.dltorg.dlt-domain.com","protocol":"https","hostname":"localhost","port":7054,"tlsOptions":{"trustedRoots":["-----BEGIN CERTIFICATE-----\nMIICFzCCAb2gAwIBAgIUYsHjCyrFKHDzagen8wS2JxuxDykwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIxNzA4MDkwMFoXDTM2MTIxMzA4MDkwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiVETizflPz4ALyowVf+pHIa2\nrW/u/q0tuBEpHTujojZjsMMM7co8BaHCzVqc6K86oHDyEUB99F/W2mK0zQ2dE6NF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFHVTD4QLfk24+IRmESMML6desVosMAoGCCqGSM49BAMCA0gAMEUCIQDbLq3+0FVc\nFzOBUFia7iDw3icAy39ufm/17mHjcUa3CQIgeg4IS2ITX40TaWwwhwH6LZzbQdvw\nUesTQ9fMSlbqaPI=\n-----END CERTIFICATE-----\n"],"verify":false}} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FabricCAClientImpl.js]: Successfully constructed Fabric CA service client: endpoint - {"protocol":"https","hostname":"localhost","port":7054} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: generateKey, store.setValue 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 7bdfc4d0370573a76f16dc318d5ffbdcb0cbd780a2f6ebfe35468c877dc4c14b 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: df631eec417b83693bec6db1c747001bdac442ba36d8a56e69999affa81cdb71 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "605f1eaf0de3e5dc911ec8c860b926dabf95d04df888fdd40ec0e646fa55700b-priv"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 7bdfc4d0370573a76f16dc318d5ffbdcb0cbd780a2f6ebfe35468c877dc4c14b 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: df631eec417b83693bec6db1c747001bdac442ba36d8a56e69999affa81cdb71 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "605f1eaf0de3e5dc911ec8c860b926dabf95d04df888fdd40ec0e646fa55700b-priv"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 7bdfc4d0370573a76f16dc318d5ffbdcb0cbd780a2f6ebfe35468c877dc4c14b 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: df631eec417b83693bec6db1c747001bdac442ba36d8a56e69999affa81cdb71 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "605f1eaf0de3e5dc911ec8c860b926dabf95d04df888fdd40ec0e646fa55700b-pub"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 7bdfc4d0370573a76f16dc318d5ffbdcb0cbd780a2f6ebfe35468c877dc4c14b 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: df631eec417b83693bec6db1c747001bdac442ba36d8a56e69999affa81cdb71 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 7bdfc4d0370573a76f16dc318d5ffbdcb0cbd780a2f6ebfe35468c877dc4c14b 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: df631eec417b83693bec6db1c747001bdac442ba36d8a56e69999affa81cdb71 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 7bdfc4d0370573a76f16dc318d5ffbdcb0cbd780a2f6ebfe35468c877dc4c14b 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: df631eec417b83693bec6db1c747001bdac442ba36d8a56e69999affa81cdb71 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "admin"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FabricCAClientImpl.js]: Successfully constructed Fabric CA client from options - {"caname":"ca.dltorg.dlt-domain.com","protocol":"https","hostname":"localhost","port":7054,"tlsOptions":{"trustedRoots":["-----BEGIN CERTIFICATE-----\nMIICFzCCAb2gAwIBAgIUYsHjCyrFKHDzagen8wS2JxuxDykwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIxNzA4MDkwMFoXDTM2MTIxMzA4MDkwMFowaDELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBl\ncmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMtY2Etc2Vy\ndmVyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiVETizflPz4ALyowVf+pHIa2\nrW/u/q0tuBEpHTujojZjsMMM7co8BaHCzVqc6K86oHDyEUB99F/W2mK0zQ2dE6NF\nMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYE\nFHVTD4QLfk24+IRmESMML6desVosMAoGCCqGSM49BAMCA0gAMEUCIQDbLq3+0FVc\nFzOBUFia7iDw3icAy39ufm/17mHjcUa3CQIgeg4IS2ITX40TaWwwhwH6LZzbQdvw\nUesTQ9fMSlbqaPI=\n-----END CERTIFICATE-----\n"],"verify":false}} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FabricCAClientImpl.js]: Successfully constructed Fabric CA service client: endpoint - {"protocol":"https","hostname":"localhost","port":7054} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "fc1ade7f383129d4b75ac66afed7e91d8de5de43be20903dea046e7ecc9da118",
+  "s": "4ba497cac544394d1eafac985b270e194554b9e1ac41d0f6c4bd9b513eb0ec96",
+  "recoveryParam": 0
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FabricCAClientImpl.js]: bodyAndcert: eyJpZCI6InNtYXJ0Zmxvdy5zeXN0ZW1AYW56LmNvbSIsImFmZmlsaWF0aW9uIjoiZGx0b3JnLmRlcGFydG1lbnQxIiwibWF4X2Vucm9sbG1lbnRzIjoxLCJ0eXBlIjoiY2xpZW50IiwiYXR0cnMiOltdLCJjYU5hbWUiOiJjYS5kbHRvcmcuZGx0LWRvbWFpbi5jb20ifQ==.LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUI2ekNDQVpHZ0F3SUJBZ0lVUmdod3FTQnZHdDQweElqOGpjZHNtb0FpOU1Nd0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEl4TVRJeE56QTRNVEF3TUZvWERUSXlNVEl4TnpBNE1UVXdNRm93SVRFUE1BMEcKQTFVRUN4TUdZMnhwWlc1ME1RNHdEQVlEVlFRREV3VmhaRzFwYmpCWk1CTUdCeXFHU000OUFnRUdDQ3FHU000OQpBd0VIQTBJQUJIdmZ4TkEzQlhPbmJ4YmNNWTFmKzl5d3k5ZUFvdmJyL2pWR2pJZDl4TUZMMzJNZTdFRjdnMms3CjdHMnh4MGNBRzlyRVFybzIyS1Z1YVptYS82Z2MyM0dqWURCZU1BNEdBMVVkRHdFQi93UUVBd0lIZ0RBTUJnTlYKSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJSU3FoTlgxUnYzRTgzRUhGKzVjbUpRaUJnYWdqQWZCZ05WSFNNRQpHREFXZ0JSMVV3K0VDMzVOdVBpRVpoRWpEQytuWHJGYUxEQUtCZ2dxaGtqT1BRUURBZ05JQURCRkFpRUFpMUtKCi9tTnd3eUNnaWl1VXJhREhsNE14cnJ1VUlYTllNaXcwcGJrVWtkRUNJRGpLZmVIWHh6dlFhalY5VVluanJ3UEMKSW1ucDFyVDBQWDN2eTZvYUFTTlcKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo= 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	Successfully registered user smartflow.system@anz.com with secret yYaHOWlTxMME. Register object is:
+{"enrollmentID":"smartflow.system@anz.com","affiliation":"dltorg.department1","role":"client","attrs":[],"maxEnrollments":1} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: generateKey, store.setValue 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f-priv"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	Successfully enrolled member user smartflow.system@anz.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f-priv"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f-pub"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "smartflow.system@anz.com"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	Successfully created user {"username":"smartflow.system@anz.com","mspid":"dltorgMSP","cryptoContent":{"privateKeyPEM":"-----BEGIN PRIVATE KEY-----\r\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgaiMHj1LY3KxRMWgE\r\n9Uc6fW/lrj3Ms8c2E2hBCsHyGI+hRANCAARQWbt7PHytDE9XRGlbnYGUGBvKZ4f2\r\nTAtgCRRAAOhVPdihM0/TJQNUj0FjgW5Q7GbJi95/7TDX1vW40a2vC9nz\r\n-----END PRIVATE KEY-----\r\n","signedCertPEM":"-----BEGIN CERTIFICATE-----\nMIICojCCAkigAwIBAgIUD9m6IiYHSrFTXaEH8UDJq5guKLQwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIxNzA4MTAwMFoXDTIyMTIxNzA4MTUwMFowVzEyMA0G\nA1UECxMGY2xpZW50MA0GA1UECxMGZGx0b3JnMBIGA1UECxMLZGVwYXJ0bWVudDEx\nITAfBgNVBAMMGHNtYXJ0Zmxvdy5zeXN0ZW1AYW56LmNvbTBZMBMGByqGSM49AgEG\nCCqGSM49AwEHA0IABFBZu3s8fK0MT1dEaVudgZQYG8pnh/ZMC2AJFEAA6FU92KEz\nT9MlA1SPQWOBblDsZsmL3n/tMNfW9bjRra8L2fOjgeAwgd0wDgYDVR0PAQH/BAQD\nAgeAMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFHAIiZ8HNYKKZmjN5A1G2vm0/HuB\nMB8GA1UdIwQYMBaAFHVTD4QLfk24+IRmESMML6desVosMH0GCCoDBAUGBwgBBHF7\nImF0dHJzIjp7ImhmLkFmZmlsaWF0aW9uIjoiZGx0b3JnLmRlcGFydG1lbnQxIiwi\naGYuRW5yb2xsbWVudElEIjoic21hcnRmbG93LnN5c3RlbUBhbnouY29tIiwiaGYu\nVHlwZSI6ImNsaWVudCJ9fTAKBggqhkjOPQQDAgNIADBFAiEAgf0ytAMcr2P8M7ma\nklvbjwbaPiCB8dRAO+QulVuCG5YCIGsir4Sce8K2A/yJASg2eSkIWIhwN/XCJLwN\nGjxrAnht\n-----END CERTIFICATE-----\n"}} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "smartflow.system@anz.com"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f-pub"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f-priv"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	Successfully loaded user context {"name":"smartflow.system@anz.com","mspid":"dltorgMSP","roles":null,"affiliation":"","enrollmentSecret":"","enrollment":{"signingIdentity":"c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f","identity":{"certificate":"-----BEGIN CERTIFICATE-----\nMIICojCCAkigAwIBAgIUD9m6IiYHSrFTXaEH8UDJq5guKLQwCgYIKoZIzj0EAwIw\naDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRkwFwYDVQQDExBmYWJyaWMt\nY2Etc2VydmVyMB4XDTIxMTIxNzA4MTAwMFoXDTIyMTIxNzA4MTUwMFowVzEyMA0G\nA1UECxMGY2xpZW50MA0GA1UECxMGZGx0b3JnMBIGA1UECxMLZGVwYXJ0bWVudDEx\nITAfBgNVBAMMGHNtYXJ0Zmxvdy5zeXN0ZW1AYW56LmNvbTBZMBMGByqGSM49AgEG\nCCqGSM49AwEHA0IABFBZu3s8fK0MT1dEaVudgZQYG8pnh/ZMC2AJFEAA6FU92KEz\nT9MlA1SPQWOBblDsZsmL3n/tMNfW9bjRra8L2fOjgeAwgd0wDgYDVR0PAQH/BAQD\nAgeAMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFHAIiZ8HNYKKZmjN5A1G2vm0/HuB\nMB8GA1UdIwQYMBaAFHVTD4QLfk24+IRmESMML6desVosMH0GCCoDBAUGBwgBBHF7\nImF0dHJzIjp7ImhmLkFmZmlsaWF0aW9uIjoiZGx0b3JnLmRlcGFydG1lbnQxIiwi\naGYuRW5yb2xsbWVudElEIjoic21hcnRmbG93LnN5c3RlbUBhbnouY29tIiwiaGYu\nVHlwZSI6ImNsaWVudCJ9fTAKBggqhkjOPQQDAgNIADBFAiEAgf0ytAMcr2P8M7ma\nklvbjwbaPiCB8dRAO+QulVuCG5YCIGsir4Sce8K2A/yJASg2eSkIWIhwN/XCJLwN\nGjxrAnht\n-----END CERTIFICATE-----\n"}}} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	 ------>>>>>> new request for /chaincodes 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	Decoded from JWT token: username - smartflow.system@anz.com, orgname - dltorg 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	==================== INSTALL CHAINCODE ================== 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	peers : peer0.dltorg.dlt-domain.com,peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	chaincodeName : dltledgerssccc 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	chaincodePath  : ../../chaincode/agrocc/node 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	chaincodeVersion  : v0 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	chaincodeType  : node 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	
+
+============ Install chaincode on organizations ============
+ 
+2021-12-17 08:14:45 [[32minfo[39m]: 	Calling peers in organization "dltorg" to join the channel 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg smartflow.system@anz.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1a6a04a15e9334d135b9dfc90bf4c27528a1dd1c4692db625ddb97fbeeb1f719","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/7eff9d1b4188dc40b7fbfaf3a7a31e2cd7ca9574dac529e2a91f56c1edeb7a76_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"d0e158ee1b259ab55a2b0348","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "smartflow.system@anz.com"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f-pub"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f-priv"
+}
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	User smartflow.system@anz.com was found to be registered and enrolled 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg smartflow.system@anz.com 
+
+ 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:45 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "9f594719c9dddc28f96dea2647e80f974bed6e463f2a3ff2d0ff80889c6e790e",
+  "s": "55a95ecd4e596bd5ee15695f863dd514ca46a11a9325a9589a1216fc3d6b312a",
+  "recoveryParam": 0
+}
+2021-12-17 08:14:46 [[32minfo[39m]: 	install proposal was good 
+2021-12-17 08:14:46 [[32minfo[39m]: 	install proposal was good 
+2021-12-17 08:14:46 [[32minfo[39m]: 	Successfully installed chaincode 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	 ------>>>>>> new request for /channels/dltchannel/chaincodes 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	Decoded from JWT token: username - smartflow.system@anz.com, orgname - dltorg 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	==================== INSTANTIATE CHAINCODE ================== 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	peers  : peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	channelName  : dltchannel 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	chaincodeName : dltledgerssccc 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	chaincodeVersion  : v0 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	chaincodeType  : node 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	fcn  : undefined 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	args  :  
+2021-12-17 08:14:46 [[34mdebug[39m]: 	policy  : [object Object] 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	
+
+============ Instantiate chaincode on channel dltchannel ============
+ 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	getClientForOrg - ****** START dltorg smartflow.system@anz.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"network-config","x-type":"hlfv1","description":"Custom generated network by Dlt","version":"1.0","channels":{"dltchannel":{"orderers":["orderer0.dltorg.dlt-domain.com","orderer1.dltorg.dlt-domain.com","orderer2.dltorg.dlt-domain.com"],"peers":{"peer0.dltorg.dlt-domain.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.dltorg.dlt-domain.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":false}},"chaincodes":[]}},"organizations":{"dltorg":{"secret":"1a6a04a15e9334d135b9dfc90bf4c27528a1dd1c4692db625ddb97fbeeb1f719","mspid":"dltorgMSP","peers":["peer0.dltorg.dlt-domain.com","peer1.dltorg.dlt-domain.com"],"certificateAuthorities":["ca.dltorg.dlt-domain.com"],"adminPrivateKey":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/keystore/7eff9d1b4188dc40b7fbfaf3a7a31e2cd7ca9574dac529e2a91f56c1edeb7a76_sk"},"signedCert":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/users/Admin@dltorg.dlt-domain.com/msp/signcerts/Admin@dltorg.dlt-domain.com-cert.pem"}}},"orderers":{"orderer0.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer0.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer1.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:8050","grpcOptions":{"ssl-target-name-override":"orderer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer1.dltorg.dlt-domain.com/tls/ca.crt"}},"orderer2.dltorg.dlt-domain.com":{"mspid":"ordererMSP","url":"grpcs://localhost:9050","grpcOptions":{"ssl-target-name-override":"orderer2.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/ordererOrganizations/dlt-domain.com/orderers/orderer2.dltorg.dlt-domain.com/tls/ca.crt"}}},"peers":{"peer0.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer0.dltorg.dlt-domain.com/tls/ca.crt"}},"peer1.dltorg.dlt-domain.com":{"url":"grpcs://localhost:7061","grpcOptions":{"ssl-target-name-override":"peer1.dltorg.dlt-domain.com"},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/peers/peer1.dltorg.dlt-domain.com/tls/ca.crt"}}},"certificateAuthorities":{"ca.dltorg.dlt-domain.com":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../crypto-config/peerOrganizations/dltorg.dlt-domain.com/ca/ca.dltorg.dlt-domain.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"d0e158ee1b259ab55a2b0348","caName":"ca.dltorg.dlt-domain.com"}]}}} 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: constructor, network_config: {"name":"dltorg","x-type":"hlfv1","description":"Dlt Autogenerated network","version":"1.0","client":{"organization":"dltorg","credentialStore":{"path":"./fabric-client-credential-dltorg","cryptoStore":{"path":"./fabric-client-crypto-dltorg"},"wallet":"dltorg-wallet"}}} 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: mergeSettings - additions start 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-credential-dltorg",
+    "wallet": "dltorg-wallet",
+    "cryptoStore": {
+      "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+    }
+  }
+}
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: constructor, keySize: 256 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "smartflow.system@anz.com"
+}
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - start 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: importKey - have the key [Circular] 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"}} 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[FileKeyValueStore.js]: constructor {
+  "options": {
+    "path": "/home/user/test-network/dltorg-config/fabricSDK/fabric-client-crypto-dltorg"
+  }
+}
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore returning ks 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[FileKeyValueStore.js]: setValue {
+  "key": "c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f-pub"
+}
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[utils.CryptoKeyStore]: _getKeyStore resolving store 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[FileKeyValueStore.js]: getValue {
+  "key": "c15740963cf67ba6f7f5e8607af2b45b296edcb8b89aa4019e5f6b76f809be0f-priv"
+}
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param X: 5059bb7b3c7cad0c4f5744695b9d8194181bca6787f64c0b6009144000e8553d 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[ecdsa/key.js]: ECDSA curve param Y: d8a1334fd32503548f4163816e50ec66c98bde7fed30d7d6f5b8d1adaf0bd9f3 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	User smartflow.system@anz.com was found to be registered and enrolled 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	getClientForOrg - ****** END dltorg smartflow.system@anz.com 
+
+ 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	Successfully got the fabric client for the organization "dltorg" 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getChannel - name dltchannel 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer1.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrderer - name orderer2.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:14:46 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "59ee2e5e99875b570ccbf0fdd1e6e86ac23ae6f07df4b7841254ba00c492c22e",
+  "s": "6555e86af1dfe835cc9ca1ff82be701d6d7a02b8fbe6559ca40487841138d38b",
+  "recoveryParam": 1
+}
+2021-12-17 08:15:13 [[32minfo[39m]: 	instantiate proposal was good 
+2021-12-17 08:15:13 [[32minfo[39m]: 	Successfully sent Proposal and received ProposalResponse: Status - 200, message - "", metadata - "
+dltledgersscccv0escc"vscc* 
+	dltorgMSP2D
+ �\a�N��c�\�t�d��_�F�0���0&T5l &O�وҏ8���3މf�%��Wa@/4��: ���X�bTa�����Tdo��N�7�4�=���B 
+	dltorgMSP", endorsement signature: 0E! �����pv��I7��H�5k򍍓�R���P��� 6����gs��^5zj��l�a| ����k�H� 
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[NetworkConfig101.js]: getOrganization - name dltorg 
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[Organization.js]: Organization.const  
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer0.dltorg.dlt-domain.com 
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[NetworkConfig101.js]: getPeer - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[NetworkConfig101.js]: getEventHub - name peer1.dltorg.dlt-domain.com 
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[NetworkConfig101.js]: getCertificateAuthority - name ca.dltorg.dlt-domain.com 
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[CertificateAuthority.js]: CertificateAuthority.const  
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[CertificateAuthority.js]: Organization.const  
+2021-12-17 08:15:13 [[34mdebug[39m]: 	found 1 eventhubs for this organization dltorg 
+2021-12-17 08:15:13 [[34mdebug[39m]: 	instantiateEventPromise - setting up event 
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "8b4ee8992c611a26c4134d5edc52ac2d22e54769fcb705c1227b9b72c72f7152",
+  "s": "10402e7873d8f6825bfc66a3b6f0d43f01168a72930b426b8694effb25dead0e",
+  "recoveryParam": 1
+}
+2021-12-17 08:15:13 [[34mdebug[39m]: 	[crypto_ecdsa_aes]: ecdsa signature:  {
+  "r": "ab425af230edb094f2d1677db82f7978f28b525ae9eaf70fc75e418d11836dd6",
+  "s": "4b5282f803dfe89717d918ca831931cbd6095d9025df2bf66c5ec9bc11880ed3",
+  "recoveryParam": 0
+}
+2021-12-17 08:15:15 [[32minfo[39m]: 	The chaincode instantiate transaction has been committed on peer localhost:7051 
+2021-12-17 08:15:15 [[32minfo[39m]: 	Transaction 726f0809d6f49628947eb1c55c4039ff702c3c06d44d1dbdc4415f11329a92eb has status of VALID in blocl 2 
+2021-12-17 08:15:15 [[32minfo[39m]: 	The chaincode instantiate transaction was valid. 
+2021-12-17 08:15:15 [[34mdebug[39m]: 	------->>> R E S P O N S E : ["The chaincode instantiate transaction was valid.",{"status":"SUCCESS","info":""}] 
+2021-12-17 08:15:15 [[32minfo[39m]: 	Successfully sent transaction to the orderer. 
+2021-12-17 08:15:15 [[34mdebug[39m]: 	Event results for event hub :localhost:7051 
+2021-12-17 08:15:15 [[34mdebug[39m]: 	The chaincode instantiate transaction was valid. 
+2021-12-17 08:15:16 [[32minfo[39m]: 	Successfully instantiate chaincode in organization dltorg to the channel 'dltchannel' 
