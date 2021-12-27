@@ -183,11 +183,11 @@ CHAINCODE CHILDCC
 
    To invoke CreateBp action of childcc ,run the below command
 
-   docker exec climyOrg peer chaincode invoke -o orderer0.myOrg.example.com:7050 -C mychannel -n parentcc --peerAddresses peer0.org1.example.com:7051  -c '{"Args":["invokeAnotherChaincode","childcc","mychannel","{\"fcn\": \"createBP\",\"params\": [\"bp02\",\"bpName02\",\"bpDescriptio02\"]}]}'
+   docker exec climyOrg peer chaincode invoke -o orderer0.myOrg.example.com:7050 -C mychannel -n parentcc --peerAddresses peer0.myOrg.example.com:7051  -c '{"Args":["invokeAnotherChaincode","childcc","mychannel","{\"fcn\": \"createBP\",\"params\": [\"bp02\",\"bpName02\",\"bpDescriptio02\"]}]}'
 
    To invoke updateBpDescription run the below command
 
-   docker exec climyOrg peer chaincode invoke -o orderer0.myOrg.example.com:7050 -C mychannel -n parentcc --peerAddresses peer0.org1.example.com:7051  -c '{"Args":["invokeAnotherChaincode","childcc","mychannel","{\"fcn\": \"updateBpDescription\",\"params\": [\"bp02\",\"newBpDescription\"]}]}'
+   docker exec climyOrg peer chaincode invoke -o orderer0.myOrg.example.com:7050 -C mychannel -n parentcc --peerAddresses peer0.myOrg.example.com:7051  -c '{"Args":["invokeAnotherChaincode","childcc","mychannel","{\"fcn\": \"updateBpDescription\",\"params\": [\"bp02\",\"newBpDescription\"]}]}'
 
    To queryBp
 
