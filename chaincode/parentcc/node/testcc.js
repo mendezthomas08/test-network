@@ -36,12 +36,8 @@ let Chaincode = class {
         }
     }
 
-    // ===============================================
-    // createBP - create a BP in chaincode state
-    // Args - bpId, bpName, bpDescription
-    // ===============================================
     async invokeAnotherChaincode(stub,args, thisClass) {
-        logger.info('--- start createBP ---');
+        logger.info('--- Invoke childcc from parentcc---');
         if (args.length != 3) {
             throw new Error('Incorrect number of arguments. Expecting 3.');
         }
@@ -70,6 +66,7 @@ let Chaincode = class {
             chaincodeArgs.push(Buffer.from(paramArray[i]))
 
         }
+        //Invoking childcc
         await stub.invokeChaincode(chaincodeName,chaincodeArgs,channelName);
 
     }
